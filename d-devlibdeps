@@ -66,6 +66,7 @@ overridedevlibdeps() {
 		-e 's/libcairo-gobject2-dev/libcairo-dev/' \
 		-e 's/libcblas3-dev/libcblas-dev/' \
 		-e 's/libcelt0-0-dev/libcelt-dev/' \
+		-e 's/libcholmod[.0-9]\+-dev/libsuitesparse-dev/' \
 		-e 's/libcomerr2//' \
 		-e 's/libcom_err2-dev/comerr-dev/' \
 		-e 's/libcrack2-dev/cracklib2-dev/' \
@@ -77,14 +78,17 @@ overridedevlibdeps() {
 		-e 's/libctpp2-.*-dev/libctpp2-dev/' \
 		-e 's/libdbus-1-3-dev/libdbus-1-dev/' \
 		-e 's/libdcm\(data\|net\)[0-9]\+-dev/libdcmtk-dev/' \
+		-e 's/libdeflate[.0-9]\+-dev/libdeflate-dev/' \
 		-e 's/libdl2\.1-dev//' \
 		-e 's/libdl2-dev//' \
 		-e 's/libeditorconfig0-dev/libeditorconfig-dev/' \
 		-e 's/libeXosip2-[0-9]\+-dev/libexosip2-dev/' \
 		-e 's/libf2clibf2c.so-dev/libf2c2-dev/' \
 		-e 's/libffado2-dev/libffado-dev/' \
+		-e 's/libfml[.0-9]\+-dev/libfml-dev/' \
 		-e 's/libfribidi0-dev/libfribidi-dev/' \
 		-e 's/libGenome-\([.0-9]\+\)-[0-9]\+-dev/libgenome-\1-dev/' \
+		-e 's/libGenome[.0-9]\+-dev/libgenome-dev/' \
 		-e 's/libGL1-dev/xlibmesa-gl-dev/' \
 		-e 's/libGLU1-dev/xlibmesa-glu-dev/' \
 		-e 's/libgcc_s.*-dev//' \
@@ -94,12 +98,13 @@ overridedevlibdeps() {
 		-e 's/libgdk-3-0-dev/libgtk-3-dev/' \
 		-e 's/libgdk_pixbuf-2\.0-0-dev/libgtk2.0-dev/' \
 		-e 's/libgdk-x11-2\.0-0-dev/libgtk2.0-dev/' \
+		-e 's/libgfortran[345]-dev/libgfortran-10-dev/' \
 		-e 's/libgif7-dev/libgif-dev/' \
 		-e 's/libgio-2\.0-0-dev/libglib2.0-dev/' \
 		-e 's/libgioftp2-dev/libfontforge-dev/' \
 		-e 's/libglib-1\.2-0-dev/libglib1.2-dev/' \
 		-e 's/libglib-2\.0-0-dev/libglib2.0-dev/' \
-		-e 's/libglpk40-dev/libglpk-dev/' \
+		-e 's/libglpk[.0-9]\+-dev/libglpk-dev/' \
 		-e 's/libgmodule-1\.2-0-dev/libglib1.2-dev/' \
 		-e 's/libgmodule-2\.0-0-dev/libglib2.0-dev/' \
 		-e 's/libgmp10-dev/libgmp-dev/' \
@@ -107,6 +112,7 @@ overridedevlibdeps() {
 		-e 's/libgnutls\(-deb0-28\|30\)/libgnutls28/' \
 		-e 's/libgobject-2\.0-0-dev/libglib2.0-dev/' \
 		-e 's/libgomp1-dev//' \
+		-e 's/libgsl23-dev/libgsl-dev/' \
 		-e 's/libgssapi_krb5-2-dev/libkrb5-dev/' \
 		-e 's/libgthread-1\.2-0-dev/libglib1.2-dev/' \
 		-e 's/libgthread-2\.0-0-dev/libglib2.0-dev/' \
@@ -117,7 +123,8 @@ overridedevlibdeps() {
 		-e 's/libgutils[0-9]-dev/libfontforge-dev/' \
 		-e 's/libharfbuzz[0-9.]\+-dev/libharfbuzz-dev/' \
 		-e 's/libhts[1-9]-dev/libhts-dev/' \
-		-e 's/libhdf5_serial[0-9]*-dev/libhdf5-dev/' \
+		-e 's/libhtscodecs[.0-9]\+-dev/libhtscodecs-dev/' \
+		-e 's/libhdf5_serial.*-dev/libhdf5-dev/' \
 		-e 's/libhunspell-[0-9.-]\+-dev/libhunspell-dev/' \
 		-e 's/libICE6-dev/libice-dev/' \
 		-e 's/libicu\(i18n\|uc\)[0-9]\+-dev/libicu-dev/' \
@@ -131,19 +138,24 @@ overridedevlibdeps() {
 		-e 's/libkrb5-3-dev/libkrb5-dev/' \
 		-e 's/liblapack3-dev/liblapack-dev/' \
 		-e 's/liblcms2-2-dev/liblcms2-dev/' \
+		-e 's/liblept5-dev/libleptonica-dev/' \
 		-e 's/libleveldb1-dev/libleveldb-dev/' \
+		-e 's/libmaus2_.*-dev/libmaus2-dev/' \
 		-e 's/lib\(nspr\|plc\|plds\)4-lib\(nspr\|plc\|plds\)4.so-dev/libnspr4-dev/' \
 		-e 's/lib\(nss\|nssutil\|smime\)3-lib\(nss\|nssutil\|smime\)3.so-dev/libnss3-dev/' \
-		-e 's/libre0-dev/libre-dev/' \
-		-e 's/librem0-dev/librem-dev/' \
+		-e 's/libre[.0-9]\+-dev/libre-dev/' \
+		-e 's/librem[.0-9]\+-dev/librem-dev/' \
 		-e 's/liblzma5-dev/liblzma-dev/' \
 		-e 's/libls1-dev//' \
 		-e 's/libMUSCLE-\([.0-9]\+\)-[0-9]\+-dev/libmuscle-\1-dev/' \
+		-e 's/libMUSCLE[.0-9]\+-dev/libmuscle-dev/' \
 		-e 's/libm1-dev//' \
 		-e 's/libm6\.1-dev//' \
 		-e 's/libm6-dev//' \
-		-e 's/libmbed[a-z0-9]\+-dev/libmbedtls-dev/' \
+		-e 's/libmbed[.a-z0-9-]\+-dev/libmbedtls-dev/' \
 		-e 's/libminisat2-dev/minisat/' \
+		-e 's/libncurses6-dev/libncurses-dev/' \
+		-e 's/libnettle[.0-9]*-dev/nettle-dev/' \
 		-e 's/libnsl1\.1-dev//' \
 		-e 's/libnsl1-dev//' \
 		-e 's/libof\(log\|std\)[0-9]\+-dev/libdcmtk-dev/' \
@@ -155,11 +167,14 @@ overridedevlibdeps() {
 		-e 's/libpango\(\|cairo\|ft2\|x\|xft\)-1\.0-0-dev/libpango1.0-dev/' \
 		-e 's/libpaper1/libpaper/' \
 		-e 's/libparted-1\.6-0-dev/libparted1.6-dev/' \
+		-e 's/libpbbam[.0-9]\+-dev/libpbbam-dev/' \
+		-e 's/libpbcopper[.0-9]\+-dev/libpbcopper-dev/' \
 		-e 's/libpcre2-[0-9-]\+-dev/libpcre2-dev/' \
 		-e 's/libpj\(\|lib-util\|media\(\|-audiodev\|-codec\|-videodev\)\|nath\|sip\(\|-simple\|-ua\)\|sua\)2-dev/libpjproject-dev/' \
 		-e 's/libpng16-16-dev/libpng-dev/' \
 		-e 's/libpopt0-dev/libpopt-dev/' \
 		-e 's/libportaudio2-dev/portaudio19-dev/' \
+		-e 's/libProgressBar0-dev/libgkarrays-dev/' \
 		-e 's/libprotobuf[0-9]\+-dev/libprotobuf-dev/' \
 		-e 's/libpugixml.*-dev/libpugixml-dev/' \
 		-e 's/libpthread0\.3-dev//' \
@@ -188,11 +203,13 @@ overridedevlibdeps() {
 		-e 's/libspiro[0-9]\+-dev/libspiro-dev/' \
 		-e 's/libsqlite3-[.0-9]\+-dev/libsqlite3-dev/' \
 		-e 's/libssl.*-dev/libssl-dev/' \
+		-e 's/libssw[.0-9]\+-dev/libssw-dev/' \
 		-e 's/libsrtp0/libsrtp/' \
 		-e 's/libstdc++6.*-dev//' \
 		-e 's/libsvm3-dev/libsvm-dev/' \
 		-e 's/libtheora0-dev/libtheora-dev/' \
 		-e 's/libtinfo6-dev/libtinfo-dev/' \
+		-e 's/libtinyxml[.0-9]\+-dev/libtinyxml-dev/' \
 		-e 's/libtrio[12]-dev/libtrio-dev/' \
 		-e 's/libu\(common\|secure\)[0-9]*-dev/libucommon-dev/' \
 		-e 's/libuninameslist1-dev/libuninameslist-dev/' \
@@ -208,6 +225,8 @@ overridedevlibdeps() {
 		-e 's/libX\([a-z]\+\)[0-9]-dev/libx\1-dev/' \
 		-e 's/libxml2-2-dev/libxml2-dev/' \
 		-e 's/libz1-dev/zlib1g-dev/' \
+		-e 's/libznz[0-9.]*-dev/libznz-dev/' \
+		-e 's/libzstd[.0-9.]*-dev/libzstd-dev/' \
 		-e 's/xlibmesa-gl-dev/libgl1-mesa-dev/' \
 		"${OVERRIDE[@]/#/-e}"
 }

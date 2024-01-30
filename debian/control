@@ -25,14 +25,14 @@ Pre-Depends:
  ${misc:Pre-Depends},
 Multi-Arch: foreign
 Description: Debian shared library package building helper scripts
- Shared library packages in Debian need some special catering to do
- with regards to which files go where.
- This package contains programs which try to help automate the process
- and catch simple errors
+ Shared library packages in Debian need some special catering
+ to do with regards to which files go where.
+ This package contains programs
+ which try to help automate the process
+ and catch simple errors.
  .
- "d-shlibmove" moves the shared library binary around
- from temporary installation directory
- to the  destination package directory.
- .
- "d-devlibdeps" tries to list the development library dependencies
- required for using the -dev package.
+  * "d-shlibmove" moves the shared library binary around
+    from temporary installation directory
+    to the  destination package directory.
+  * "d-devlibdeps" tries to list the development library dependencies
+    required for using the -dev package.

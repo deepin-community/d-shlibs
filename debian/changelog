@@ -1,3 +1,21 @@
+d-shlibs (0.105) unstable; urgency=medium
+
+  * add quirk for leptonica
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 19 Sep 2023 21:58:30 +0200
+
+d-shlibs (0.104) unstable; urgency=medium
+
+  * use semantic newlines in long description
+  * add quirks for cholmod deflate fml genome gfortran gkarrays gsl
+    htscodecs maus2 muscle ncurses nettle pbbam pbcopper ProgressBar0
+    ssw tinyxml znz zstd;
+  * extend quirk for hdf5_serial to cover any suffix
+  * extend quirk for mbed to cover dot and dash (see bug#999788)
+  * extend quirks for glpk re rem to cover any trailing version
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 17 Nov 2021 17:22:32 +0100
+
 d-shlibs (0.103) unstable; urgency=medium
 
   * fix have autopkgtest depend on libc6-dev

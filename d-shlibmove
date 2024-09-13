@@ -69,6 +69,15 @@ check_line() {
 	local PKGNAME="$1"
 	local ENTRYLINE="$2"
 
+	# Do not check for "Section: libs" in Package if it was defined in Source before
+        if echo "$ENTRYLINE" | grep -qw libs ; then
+                if awk '/^Source:/,/^$/{print}' "$CONTROL" \
+                | perl -0 -pe 's/\n[ \t]+/ /g' \
+                | grep -q "$ENTRYLINE" ; then
+                        CHECK_ERROR=false
+                        return
+                fi
+        fi
 	if ! awk '/^Package:.*'"$PKGNAME"'/,/^$/{print}' "$CONTROL" \
 	| perl -0 -pe 's/\n[ \t]+/ /g' \
 	| grep "$ENTRYLINE" > /dev/null; then
@@ -156,6 +165,9 @@ while [ -n "$1" ]; do
 		shift;;
 	  --v5)
 		TRANSITIONSUFFIX="v5"
+		shift;;
+	  --t64)
+		TRANSITIONSUFFIX="t64"
 		shift;;
 	  --include-a)
 		INCLUDEA=yes

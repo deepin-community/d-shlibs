@@ -1,3 +1,12 @@
+d-shlibs (0.106) unstable; urgency=medium
+
+  * Do not check for "Section: libs" in Package if it was defined in Source
+    before
+  * Standards-Version: 4.6.2
+  * Add t64 suffix to package names for 64-bit time_t transition
+
+ -- Andreas Tille <tille@debian.org>  Tue, 30 Jan 2024 08:35:49 +0100
+
 d-shlibs (0.105) unstable; urgency=medium
 
   * add quirk for leptonica
